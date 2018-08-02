@@ -25,19 +25,23 @@ import time
 UPDATE = 'asynchronous'                 # in current TomClass version only asynchronous possible
 
 DBNAME = 'paper.sqlite'                 # enter SQL file for storing data base
-FNAMECSV = 'paper.csv'                  # enter CVS file for storing classification table
+FNAMECSV = 'full.csv'                  # enter CVS file for storing classification table
+                                        # full.cvs for no RESTRICTION
+                                        # 1257.cvs for cell line MZ1257RC
+                                        # 1851.cvs for cell line MZ1851RC
 
-create                  = 1             # select 1 for creating the database
+create                  = 0             # select 1 for creating the database, only necessary once
 
-annotate_compatible     = 1             # select for model checking of data on pool
-annotate_crosstalk      = 1             # select for annotating presence/absence of optional edges to database, prerequisite for classification
+annotate_compatible     = 0             # select for model checking of data on pool
+annotate_crosstalk      = 0             # select for annotating presence/absence of optional edges to database, prerequisite for classification
 
 
 analyse_classes         = 1             # select for classification analysis, enter classes under CLASSES
 export_csv              = 1             # select for creating CVS file
 
 # For creating classifications for a subset of model, select classes (e.g. presence of edges, data sets) as RESTRICTION
-# Example:              = 'A and B and C'
+# for cell line MZ1257RC enter 'WBDMSO and WB1257Sora and Bp1257Sora and Bp1257DMSO and Bp1257Sora2 and Bp1257DMSO2'
+# for cell line MZ1851RC enter 'WBDMSO and WB1851Sora and Bp1851Sora and Bp1851DMSO and Bp1851Sora2 and Bp1851DMSO2'
 RESTRICTION             = ''
 
 # List all annotated properties (data sets, edges) the model pool is going to be classified for
