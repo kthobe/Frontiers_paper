@@ -1,4 +1,4 @@
-# Analysis of two renal cancer cell Lines using model pools
+# Analysis of two renal cancer cell lines using model pools
 Python script for the generation and analysis of pools of logical models
 
 In order to run the script, install TomClass:
