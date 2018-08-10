@@ -44,6 +44,7 @@ This function is used to annotate whether an optional edge is present or absent 
 ```R
 analyse_classes - performs classification analysis
 export_csv - name ouput file
+```
 Finally, this function runs the classification, where the features of interest need to be entered under CLASSES. The classification can also be done for a subset of models using the option RESTRICTION, e.g. selecting all datasets from one cell line gives the cell line specific pool. By adding datasets from both cell line, the classification show an empty result.
 
 The files `full.csv`, `1257.csv` and `1851.csv` show the output of the program for either no restriction and cell line specific restrictions for MZ1257RC and MZ1851RC, respectively.
