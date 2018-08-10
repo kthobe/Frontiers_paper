@@ -1,6 +1,6 @@
 # Analysis of two renal cancer cell lines using model pools
 This repository contains the code and data for the generation and analysis of pools of logical models of two renal cancer cell lines.
-The model and the result are currently under submission.
+The model and the results are currently under submission.
 
 ## Software
 The model definition and analysis is done using the tool `TomClass`:
@@ -28,20 +28,20 @@ The output files are again CSV file, with the measured species as header and the
 
 The script for defining the model, performing model-checking and analyzing the pool by classification is `Paper.py`, which runs on
 `Python 2`. There are four main functions in the script that can be used:
-```R
+```
 create - for building the model (or pool) and creating the database, only necessary once
 ```
 Inside the function, the components and interactions are defined as parameters. The edge labels and logical functions are formulated as clauses (see Manual of TomClass for details).
 Running the function gives the number of all possible parametrizations and the number of valid models according the the clauses, which is the initial model pool.
-```R
+```
 annotate_compatible - is the function that performs model checking of data on pool
 ```
 For the model-checking process, the discretized data needs to be translated into CTL formulas, for examples and details see [Thobe 2017](https://d-nb.info/1136608877/34).
-```R
+```
 annotate_crosstalk - annotates presence/absence of optional edges to database, prerequisite for classification
 ```
-This function is used to annotate whether an optional edge is present or absent in a model, thus all interactions that have the clauses `NotActivating` or `NotInhibiting` should be added here in oder to add this as a feature to a model. Later we can select for these feature (which are also datasets) to classify and analyze the model pool.
-```R
+This function is used to annotate whether an optional edge is present or absent in a model, thus all interactions that have the clauses NotActivating or NotInhibiting should be added here in oder to add this as a feature to a model. Later we can select for these feature (which are also datasets) to classify and analyze the model pool.
+```
 analyse_classes - performs classification analysis
 export_csv - name ouput file
 ```
