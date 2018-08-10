@@ -25,7 +25,7 @@ import time
 UPDATE = 'asynchronous'                 # in current TomClass version only asynchronous possible
 
 DBNAME = 'paper.sqlite'                 # enter SQL file for storing data base
-FNAMECSV = 'full.csv'                  # enter CVS file for storing classification table
+FNAMECSV = 'full.csv'                   # enter CVS file for storing classification table
                                         # full.cvs for no RESTRICTION
                                         # 1257.cvs for cell line MZ1257RC
                                         # 1851.cvs for cell line MZ1851RC
