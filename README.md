@@ -1,6 +1,8 @@
 # Analysis of two renal cancer cell lines using model pools
 This repository contains the code and data for the generation and analysis of pools of logical models of two renal cancer cell lines.
-The model and the results are currently under submission.
+The model and the results are published as 
+
+https://www.frontiersin.org/articles/10.3389/fphys.2018.01335/full
 
 ## Software
 The model definition and analysis is done using the tool `TomClass`:
@@ -54,6 +56,3 @@ The files `full.csv`, `1257.csv` and `1851.csv` show the output of the program f
 We used the output files to further analyze the model pools. In a first step, the models are sorted by the first column CROSSTALK, which is the sum of all present optional edges, thus the smallest models are on the top and the largest on the bottom. The last column SIZE gives information on how many models are in one class, which is one row of the table. The sum of the column SIZE gives the number of models in the selected pool.
 Also a subset of the table can be selected, e.g. all models that have an active edge Ct_Sora_Raf. From this table, the minimal models and necessary edges can be extracted. A selection like this can also be done directly in `Paper.py` by adding Ct_Sora_Raf to the list in RESTRICTION.
 In order to find the frequency of an optional edge in a pool, the column can be multiplied by SIZE, then summed up and divided by the pool size.  
-
-
-`
