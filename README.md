@@ -1,6 +1,6 @@
 # Analysis of two renal cancer cell lines using model pools
 This repository contains the code and data for the generation and analysis of pools of logical models of two renal cancer cell lines.
-The model and the results are published as 
+The model and the results are published in: 
 
 https://www.frontiersin.org/articles/10.3389/fphys.2018.01335/full
 
